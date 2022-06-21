@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    background: linear-gradient(90deg, #3e004b, #000, #000);
+}
+/* topo */
+.topDetail{
+    width: 220px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.acabamento{
+    width: 220px;
+    height: 220px;
+    background: linear-gradient(90deg,#5c2500,#160a01, #160a01);
+    border-radius: 50%;
+    position: relative;
+    top: 0px;
+}
+.baseTop{
+    width: 220px;
+    height: 15px;
+    background: linear-gradient(90deg,#5c2500,#160a01, #160a01);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: relative;
+    top: -185px;
+    z-index: 5;
+}
+/* caixa externa */
+.containerMedio{
+    width: 180px;
+    height: 500px;
+    background: linear-gradient(90deg,#5c2500,#160a01, #160a01);
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+.bordaInterna{
+    width: 140px;
+    height: 300px;
+    border: 10px solid #331400;
+    background: #160a01;
+    box-sizing: border-box;
+    margin: 0 auto;
+    top: -8rem;
+    overflow: hidden;
+    box-shadow: inset 10px 10px 10px 10px #000000;
+    position: relative;
+    z-index: 10;
+}
+/* relógio */
+.vidro{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin: 0 auto;
+    font-size: 12px;
+    position: relative;
+    font-weight: bold;
+    z-index: 25;
+    top: 1.4rem;
+    opacity: .2;
+    background: linear-gradient(-65deg,#fff, transparent, transparent, #fff, transparent, transparent, transparent, #fff, transparent, transparent);
+}
+.relogioAro{
+    width: 160px;
+    height: 160px;
+    border: 10px solid #331400;
+    border-radius: 50%;
+    margin: 0 auto;
+    font-size: 12px;
+    position: relative;
+    font-weight: bold;
+    top: -8rem;
+    background-color: #202020;
+    z-index: 20;
+}
+.numbers{
+    position: absolute;
+    left: 45%;
+    transform: translateX(-45%);
+    color: #6e4800;
+}
+.I{
+    transform: rotateZ(30deg);
+    position: absolute;
+    left: 35px;
+    top: 10px;
+}
+.II{
+    transform: rotateZ(60deg);
+    position: absolute;
+    left: 55px;
+    top: 30px;
+}
+.III{
+    transform: rotateZ(90deg);
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
+.IV{
+    transform: rotateZ(120deg);
+    position: absolute;
+    top: 90px;
+    left: 50px;
+}
+.V{
+    transform: rotateZ(150deg);
+    position: absolute;
+    top: 110px;
+    left: 30px;
+}
+.VI{
+    transform: rotateZ(180deg);
+    position: absolute;
+    top: 120px;
+}
+.VII{
+    transform: rotateZ(210deg);
+    position: absolute;
+    top: 110px;
+    left: -30px;
+}
+.VIII{
+    transform: rotateZ(240deg);
+    position: absolute;
+    top: 90px;
+    left: -55px;
+}
+.IX{
+    transform: rotateZ(270deg);
+    position: absolute;
+    top: 60px;
+    left: -60px;
+}
+.X{
+    transform: rotateZ(300deg);
+    position: absolute;
+    left: -50px;
+    top: 35px;
+}
+.XI{
+    transform: rotateZ(330deg);
+    position: absolute;
+    left: -35px;
+    top: 15px;
+}
+.XII{
+    transform: rotateZ(360deg);
+    position: absolute;
+}
+/* ponteiros */
+.ponteiroSeg{
+    width: 20px;
+    height: 110px;
+    margin-left: 13.5px;
+    position: absolute;
+    top: 10px;
+    left: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: segundos 60s linear infinite;
+}
+.invisible1{
+    width: 1px;
+    height: 55px;
+}
+.visible1{
+    width: 1px;
+    height: 55px;
+    background: #ffc562;
+}
+.ponteiroMin{
+    width: 20px;
+    height: 110px;
+    margin-left: 13.5px;
+    position: absolute;
+    top: 10px;
+    left: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: minutos 3600s linear infinite;
+}
+.invisible2{
+    width: 2px;
+    height: 55px;
+}
+.visible2{
+    width: 2px;
+    height: 55px;
+    background: #ffc562;
+}
+.ponteiroHora{
+    width: 20px;
+    height: 110px;
+    margin-left: 13.5px;
+    position: absolute;
+    top: 10px;
+    left: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: horas 43200s linear infinite;
+}
+.invisible3{
+    width: 3px;
+    height: 40px;
+}
+.visible3{
+    width: 3px;
+    height: 40px;
+    background: #ffc562;
+}
+@keyframes segundos {
+    100%{
+        rotate: 360deg;
+    }
+}
+@keyframes minutos {
+    100%{
+        rotate: 360deg;
+    }
+}
+@keyframes horas {
+    100%{
+        rotate: 360deg;
+    }
+}
+/* pendulo */
+.pendulo{
+    width: 102px;
+    height: 500px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+    top: -15rem;
+    animation: pendulo 2s linear infinite;
+}
+.haste{
+    width: 15px;
+    height: 400px;
+    background: linear-gradient(90deg, #ffc562, #6e4800, #332100);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.base{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #ffc562, #6e4800, #332100);
+    position: absolute;
+    top: 398px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@keyframes pendulo {
+    0%, 100%{
+        transform: rotateZ(10deg);
+    }
+    50%{
+        transform: rotateZ(-10deg);
+    }
+}
+/* base */
+.bottomDetail{
+    width: 220px;
+    height: 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    top: 510px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.base1{
+    width: 220px;
+    height: 10px;
+    background: linear-gradient(90deg,#5c2500,#160a01, #160a01);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: relative;
+    top: 0;
+    z-index: 5;
+}
+.base2{
+    width: 200px;
+    height: 10px;
+    background: linear-gradient(90deg,#5c2500,#160a01, #160a01);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+.base3{
+    width: 200px;
+    height: 10px;
+    background: linear-gradient(90deg,#5c2500,#160a01, #160a01);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+.base4{
+    width: 220px;
+    height: 10px;
+    background: linear-gradient(90deg,#5c2500,#160a01, #160a01);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
